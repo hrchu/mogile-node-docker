@@ -7,7 +7,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN  mkdir -p /etc/mogilefs \
-  && mkdir -p /var/mogdata/dev1
+  && mkdir -p /var/mogdata/dev1 \
+  && mkdir -p /var/mogdata/dev2
 
 RUN cpanm install --force MogileFS::Server
 
