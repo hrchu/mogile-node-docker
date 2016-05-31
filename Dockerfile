@@ -6,6 +6,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN sed -i '58s/-i//' /usr/local/share/perl/5.18.2/Mogstored/ChildProcess/DiskUsage.pm
 RUN  mkdir -p /etc/mogilefs \
   && mkdir -p /var/mogdata/dev1 \
   && mkdir -p /var/mogdata/dev2
